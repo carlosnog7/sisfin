@@ -1,0 +1,57 @@
+body {
+    background-color: #F8ECDC;
+}
+
+.custom-input {
+    width: 220px; /* Define a largura do input */
+    height: 25px; /* Define a altura do input */
+    font-size: 10px; /* Define o tamanho da fonte dos inputs */
+}
+
+.custom-box {
+    background-color: #8EB9D0; /* Cor de fundo */
+    width: 500px; /* Largura */
+    height: 400px; /* Altura */
+    margin: auto; /* Centraliza a caixa na tela */
+    border-radius: 25px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    position: absolute; /* Posição absoluta para manter a caixa fixa */
+    top: 50%; /* Define a posição vertical no centro da página */
+    left: 50%; /* Define a posição horizontal no centro da página */
+    transform: translate(-50%, -50%); /* Centraliza a caixa corretamente */
+    z-index: -1; /* Coloca a caixa atrás do conteúdo */
+}
+
+.logo {
+    margin-bottom: 20px; /* Margem inferior para separar a logo do formulário de login */
+}
+
+.btn-entrar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    background-color: #F8ECDC; /* Cor de fundo */
+    width: 110px; /* Largura */
+    height: 25px; /* Altura */
+    border: none; /* Remove a borda */
+    border-radius: 5; /* Remove o arredondamento da borda */
+    transition: none; /* Remove a transição */
+    box-shadow: none;
+    outline: none; /* Remove o contorno ao focar */
+    color: #5E5E5E; /* Cor do texto */
+    display: block; /* Ativa o modelo de layout flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0 auto;
+}
+.btn-entrar:hover {
+    background-color: #F8ECDC; /* Cor de fundo ao passar o mouse */
+    color: #5E5E5E; /* Cor do texto ao passar o mouse */
+    box-shadow: none; /* Remove a sombra ao passar o mouse */
+}
+
+.custom-label {
+    font-family: 'Roboto', sans-serif; /* Define a fonte como Roboto */
+    font-size: 14px; /* Define o tamanho da fonte */
+    color: #F8ECDC;
+}
+
