@@ -1,0 +1,113 @@
+body {
+    background-color: #F8ECDC;
+}
+
+.custom-box {
+    background-color: #8EB9D0;
+    width: 980px;
+    height: 650px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.inner-box {
+    background-color: #F8ECDC;
+    width: 630px;
+    height: 450px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 20px;
+    position: absolute;
+    bottom: -185px;
+    right: -260px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+
+.logo {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 30px;
+    left: 45px;
+}
+.cruz{
+    position: absolute;
+    bottom: 10px;
+    right: 140px;
+}
+
+.btn-inserir {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #F8ECDC;
+    color: #5E5E5E;
+    width: 214px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    position: absolute;
+    left: 45px;
+    bottom: 450px;
+}
+.btn-saldo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #F8ECDC;
+    color: #5E5E5E;
+    width: 214px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    position: absolute;
+    left: 45px;
+    bottom: 380px;
+
+}
+.btn-consultar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #F8ECDC;
+    color: #5E5E5E;
+    width: 290px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    position: absolute;
+    left: 45px;
+    bottom: 310px;
+    padding-left: 5px; /* Ajuste o valor conforme necessário para posicionar o texto */
+    padding-right: 80px; /* Ajuste o valor conforme necessário para posicionar o texto */
+    line-height: 30px; /* Mantém o texto centralizado verticalmente */
+}
+
+.btn-entrar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    background-color: #F8ECDC;
+    width: 110px;
+    height: 25px;
+    border: none;
+    border-radius: 5;
+    transition: none;
+    box-shadow: none;
+    outline: none;
+    color: #5E5E5E;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.custom-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #F8ECDC;
+}
+

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/login.css" rel="stylesheet">
+    <link href="/assets/css/login.css" rel="stylesheet">
 </head>
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
@@ -21,7 +21,7 @@
                 <label class="form-label" for="form2Example2">SENHA</label>
                 <input type="password" id="form2Example2" class="form-control custom-input"/>
             </div>
-            <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 entrar btn-entrar">ENTRAR</button>
+            <a href="{{ route('dashboard')}}" type="button" class="btn btn-primary btn-entrar">ENTRAR</a>
         </form>
     </div>
 </body>
