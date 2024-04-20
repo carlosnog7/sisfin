@@ -11,17 +11,18 @@
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
         <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" class="logo">
-        <form class="login-form">
+        <form class="login-form" method="POST" action="{{ route('login.authenticate') }}">
+            @csrf
             <div data-mdb-input-init class="form-outline mb-4 custom-label">
                 <label class="form-label" for="form2Example1">LOGIN</label>
-                <input type="email" id="form2Example1" class="form-control custom-input"/>
+                <input type="text" id="form2Example1" name="login" class="form-control custom-input"/>
             </div>
 
             <div data-mdb-input-init class="form-outline mb-4 custom-label">
                 <label class="form-label" for="form2Example2">SENHA</label>
-                <input type="password" id="form2Example2" class="form-control custom-input"/>
+                <input type="password" id="form2Example2" name="password" class="form-control custom-input"/>
             </div>
-            <a href="{{ route('dashboard')}}" type="button" class="btn btn-primary btn-entrar">ENTRAR</a>
+            <button type="submit" class="btn btn-primary btn-entrar">ENTRAR</button>
         </form>
     </div>
 </body>
