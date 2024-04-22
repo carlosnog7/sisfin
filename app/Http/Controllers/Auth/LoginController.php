@@ -14,19 +14,18 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-
+/*
     public function authenticate(Request $request)
     {
         $user = User::where('login', $request->login)->first();
 
         if ($user) {
-            // Verifica se a senha precisa de rehash
+
             if (Hash::needsRehash($user->password)) {
                 $user->password = Hash::make($request->password);
                 $user->save();
             }
 
-            // Tenta autenticar o usuário com a senha fornecida
             if (Hash::check($request->password, $user->password)) {
                 Auth::login($user);
                 return redirect()->intended('dashboard');
@@ -38,6 +37,24 @@ class LoginController extends Controller
 
         // Usuário não encontrado
         return back()->withErrors(['username' => 'Usuário não encontrado.']);
+    }
+*/
+    public function autenticacao(Request $request){
+        $credenciais = $request-> validate([
+            'login' => ['required','string'],
+            'password' => ['required'],
+        ], [
+            'login.required' => 'Login Obrigatório',
+            'login.login' => 'Login inválido',
+            'password.required' => 'Senha Obrigatório'
+        ]
+    );
+        if(Auth::attempt($credenciais)){
+            $request->session()->regenerate();
+            return redirect()->intended('dashboard');
+        } else {
+            return redirect()->back()->with('erro', 'login ou senha invalida');
+        }
     }
 }
 

@@ -11,7 +11,16 @@
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
         <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" class="logo">
-        <form class="login-form" method="POST" action="{{ route('login.authenticate') }}">
+        @if($mensagem = Session::get('erro'))
+        {{$mensagem}}
+        @endif
+
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                {{ $error }}
+            @endforeach
+        @endif
+        <form class="login-form" method="POST" action="{{ route('login.autenticacao') }}">
             @csrf
             <div data-mdb-input-init class="form-outline mb-4 custom-label">
                 <label class="form-label" for="form2Example1">LOGIN</label>

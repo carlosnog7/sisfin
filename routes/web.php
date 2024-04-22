@@ -9,7 +9,7 @@ use App\Http\Controllers\SaldoEmCaixa\SaldoEmCaixaController;
 
 // Rotas públicas
 Route::get('/', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+Route::post('/login', [LoginController::class, 'autenticacao'])->name('login.autenticacao');
 
 // Rotas protegidas
 Route::middleware(['auth'])->group(function () {
