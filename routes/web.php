@@ -5,7 +5,6 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\ConsultarDados\ConsultarDadosController;
 use App\Http\Controllers\InserirDados\InserirDadosController;
-use App\Http\Controllers\SaldoEmCaixa\SaldoEmCaixaController;
 
 // Rotas públicas
 Route::get('/', [LoginController::class, 'index'])->name('login');
@@ -23,9 +22,5 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('consultardados')->name('consultardados.')->group(function () {
         Route::get('/', [ConsultarDadosController::class, 'index'])->name('index');
-    });
-
-    Route::prefix('saldoemcaixa')->name('saldoemcaixa.')->group(function () {
-        Route::get('/', [SaldoEmCaixaController::class, 'index'])->name('index');
     });
 });

@@ -43,8 +43,6 @@
         <form class="login-form">
             <a href="{{ route('inserirdados.index') }}" type="button" class="btn btn-primary btn-inserir">INSERIR
                 DADOS</a>
-            <a href="{{ route('saldoemcaixa.index') }}" type="button" class="btn btn-primary btn-saldo">SALDO EM
-                CAIXA</a>
             <a href="{{ route('consultardados.index') }}" type="button"
                 class="btn btn-primary btn-consultar">CONSULTAR DADOS</a>
         </form>

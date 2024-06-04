@@ -56,22 +56,6 @@ body {
     left: 45px;
     bottom: 450px;
 }
-.btn-saldo {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    background-color: #F8ECDC;
-    color: #5E5E5E;
-    width: 290px;
-    height: 40px;
-    border-radius: 8px;
-    border: none;
-    position: absolute;
-    left: 45px;
-    bottom: 380px;
-    padding-left: 5px; /* Ajuste o valor conforme necessário para posicionar o texto */
-    padding-right: 80px; /* Ajuste o valor conforme necessário para posicionar o texto */
-    line-height: 30px; /* Mantém o texto centralizado verticalmente */
-}
 .btn-consultar {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
