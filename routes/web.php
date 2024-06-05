@@ -18,9 +18,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('inserirdados')->name('inserirdados.')->group(function () {
         Route::get('/', [InserirDadosController::class, 'index'])->name('index');
+        Route::post('/', [InserirDadosController::class, 'store'])->name('store');
     });
 
     Route::prefix('consultardados')->name('consultardados.')->group(function () {
         Route::get('/', [ConsultarDadosController::class, 'index'])->name('index');
+        Route::get('/edit/{id}', [ConsultarDadosController::class, 'edit'])->name('edit');
+        Route::put('/update/{id}', [ConsultarDadosController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [ConsultarDadosController::class, 'destroy'])->name('destroy');
     });
 });
+
+

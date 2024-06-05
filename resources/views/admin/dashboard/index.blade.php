@@ -11,6 +11,7 @@
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
         <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" class="logo">
+        <h2>Saldo Atual: R$ {{ $saldoTotal }}</h2>
         <form class="login-form">
             <a href="{{route ('inserirdados.index')}}" type="button" class="btn btn-primary btn-inserir">INSERIR DADOS</a>
             <a href="{{route ('consultardados.index')}}" type="button" class="btn btn-primary btn-consultar">CONSULTAR DADOS</a>

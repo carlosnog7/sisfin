@@ -67,10 +67,10 @@ body {
     border: none;
     position: absolute;
     left: 45px;
-    bottom: 310px;
-    padding-left: 5px; /* Ajuste o valor conforme necessário para posicionar o texto */
-    padding-right: 80px; /* Ajuste o valor conforme necessário para posicionar o texto */
-    line-height: 30px; /* Mantém o texto centralizado verticalmente */
+    bottom: 380px;
+    padding-left: 5px;
+    padding-right: 80px;
+    line-height: 30px;
 }
 
 .btn-entrar {
@@ -98,11 +98,15 @@ body {
 }
 
 .table {
-    width: 60%;
+    width: 94%;
     position: absolute;
     left: 20px;
     top: 50px;
     font-size: 12px;
+}
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
 }
 .btn-voltar{
     font-family: 'Roboto', sans-serif;
