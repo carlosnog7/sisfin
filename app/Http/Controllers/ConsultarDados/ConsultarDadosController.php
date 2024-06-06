@@ -10,8 +10,10 @@ class ConsultarDadosController extends Controller
 {
     public function index()
     {
+
         $valores = Valor::all();
         return view('admin.consultardados.index', compact('valores'));
+
     }
 
     public function edit($id)

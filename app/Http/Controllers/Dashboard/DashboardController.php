@@ -10,13 +10,21 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Recupere todos os valores do banco de dados
-        $valores = Valor::all();
+        $valores = Valor::orderBy('data')->get();
+        $saldoTotal = 0;
 
-        // Calcule o saldo total
-        $saldoTotal = $valores->sum('valor');
+        // CALCULO SALDO TOTAL
+        foreach ($valores as $valor) {
+            if ($valor->acao == 'entrada') {
+                $saldoTotal += $valor->valor;
+            } else if ($valor->acao == 'saida') {
+                $saldoTotal -= $valor->valor;
+            }
+        }
 
-        // Retorne a visualização do dashboard com o saldo total
-        return view('admin.dashboard.index', ['saldoTotal' => $saldoTotal]);
+        $saldoClass = $saldoTotal >= 0 ? 'text-positivo' : 'text-negativo';
+
+        return view('admin.dashboard.index', ['saldoTotal' => $saldoTotal, 'saldoClass' => $saldoClass]);
     }
 }
+

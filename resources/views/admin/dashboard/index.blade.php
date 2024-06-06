@@ -10,12 +10,15 @@
 </head>
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
-        <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" class="logo">
-        <h2>Saldo Atual: R$ {{ $saldoTotal }}</h2>
+        <img src="{{ asset('/assets/images/logo.png') }}" alt="logo" class="logo" onclick="location.href='{{ route('dashboard.index') }}'">
+        <div class="saldo">
+            <h3 class="saldotext">SALDO ATUAL</h3>
+            <h2 class="{{ $saldoClass }}">R$ {{ number_format($saldoTotal, 2, ',', '.') }}</h2>
+        </div>
         <form class="login-form">
-            <a href="{{route ('inserirdados.index')}}" type="button" class="btn btn-primary btn-inserir">INSERIR DADOS</a>
-            <a href="{{route ('consultardados.index')}}" type="button" class="btn btn-primary btn-consultar">CONSULTAR DADOS</a>
-        <img src="{{ asset('assets/images/cruz.png')}}" alt="cruz" class="cruz">
+            <a href="{{ route('inserirdados.index') }}" type="button" class="btn btn-primary btn-inserir">INSERIR DADOS</a>
+            <a href="{{ route('consultardados.index') }}" type="button" class="btn btn-primary btn-consultar">CONSULTAR DADOS</a>
+            <img src="{{ asset('assets/images/cruz.png') }}" alt="cruz" class="cruz">
         </form>
     </div>
 </body>

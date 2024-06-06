@@ -9,10 +9,9 @@ class Valor extends Model
 {
     use HasFactory;
 
-    // Nome da tabela no banco de dados
+    // TABELA VALORES
     protected $table = 'valores';
-
-    // Atributos que podem ser preenchidos em massa
+    // ATRIBUTOS
     protected $fillable = [
         'acao', 'valor', 'data', 'descricao'
     ];

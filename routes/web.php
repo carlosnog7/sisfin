@@ -6,11 +6,11 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\ConsultarDados\ConsultarDadosController;
 use App\Http\Controllers\InserirDados\InserirDadosController;
 
-// Rotas públicas
+// PUBLICO
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'autenticacao'])->name('login.autenticacao');
 
-// Rotas protegidas
+// PROTEGIDO
 Route::middleware(['auth'])->group(function () {
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
